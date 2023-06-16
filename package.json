@@ -1,7 +1,7 @@
 {
-  "name": "exifr",
+  "name": "@ryanccn/exifr",
   "version": "7.1.3",
-  "description": "📷 The fastest and most versatile JavaScript EXIF reading library.",
+  "description": "ESM-only build of exifr",
   "author": "Mike Kovarik",
   "license": "MIT",
   "keywords": [
@@ -28,9 +28,18 @@
     "type": "git",
     "url": "https://github.com/MikeKovarik/exifr.git"
   },
-  "main": "./dist/full.umd.js",
-  "module": "./dist/full.esm.mjs",
+  "exports": "./dist/full.esm.mjs",
   "types": "index.d.ts",
+  "files": [
+    "README.md",
+    "LICENSE",
+    "dist",
+    "index.d.ts"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "test": "mocha \"test/**/*.spec.mjs\" --recursive --exclude test/bundle-mini.spec.mjs --exclude test/bundle-lite.spec.mjs --exclude test/bundle-full.spec.mjs",
     "test-bundles": "mocha test/bundle-mini.spec.mjs && mocha test/bundle-lite.spec.mjs && mocha test/bundle-full.spec.mjs",
@@ -46,36 +55,35 @@
     "prerelease": "npm run build"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
+    "@babel/core": "^7.22.5",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-transform-arrow-functions": "^7.8.3",
-    "@babel/plugin-transform-block-scoping": "^7.8.3",
-    "@babel/plugin-transform-classes": "^7.8.6",
-    "@babel/plugin-transform-computed-properties": "^7.8.3",
-    "@babel/plugin-transform-destructuring": "^7.8.3",
-    "@babel/plugin-transform-duplicate-keys": "^7.8.3",
-    "@babel/plugin-transform-function-name": "^7.8.3",
-    "@babel/plugin-transform-literals": "^7.8.3",
-    "@babel/plugin-transform-parameters": "^7.8.7",
-    "@babel/plugin-transform-shorthand-properties": "^7.8.3",
-    "@babel/plugin-transform-spread": "^7.8.3",
-    "@babel/plugin-transform-template-literals": "^7.8.3",
-    "@babel/preset-env": "^7.6.3",
+    "@babel/plugin-transform-arrow-functions": "^7.22.5",
+    "@babel/plugin-transform-block-scoping": "^7.22.5",
+    "@babel/plugin-transform-classes": "^7.22.5",
+    "@babel/plugin-transform-computed-properties": "^7.22.5",
+    "@babel/plugin-transform-destructuring": "^7.22.5",
+    "@babel/plugin-transform-duplicate-keys": "^7.22.5",
+    "@babel/plugin-transform-function-name": "^7.22.5",
+    "@babel/plugin-transform-literals": "^7.22.5",
+    "@babel/plugin-transform-parameters": "^7.22.5",
+    "@babel/plugin-transform-shorthand-properties": "^7.22.5",
+    "@babel/plugin-transform-spread": "^7.22.5",
+    "@babel/plugin-transform-template-literals": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-terser": "^0.4.3",
     "aurelia-script": "^1.5.2",
-    "babel-plugin-transform-async-to-promises": "^0.8.15",
+    "babel-plugin-transform-async-to-promises": "^0.8.18",
     "babel-plugin-transform-for-of-without-iterator": "^1.0.3",
-    "c8": "^7.0.1",
-    "chai": "^4.3.3",
-    "coveralls": "^3.0.7",
+    "c8": "^8.0.0",
+    "chai": "^4.3.7",
+    "coveralls": "^3.1.1",
     "decorate": "^1.0.0",
-    "express": "^4.17.1",
-    "mocha": "^8.3.0",
-    "rollup": "^2.40.0",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-notify": "^1.0.1",
-    "rollup-plugin-terser": "^7.0.2"
+    "express": "^4.18.2",
+    "mocha": "^10.2.0",
+    "rollup": "^3.25.1"
   },
   "c8": {
     "exclude": [
@@ -93,6 +101,5 @@
       "text",
       "text-summary"
     ]
-  },
-  "dependencies": {}
+  }
 }
