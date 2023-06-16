@@ -23,10 +23,10 @@
     "makernote"
   ],
   "homepage": "https://mutiny.cz/exifr/",
-  "bugs": "https://github.com/MikeKovarik/exifr/issues",
+  "bugs": "https://github.com/ryanccn/exifr/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MikeKovarik/exifr.git"
+    "url": "https://github.com/ryanccn/exifr.git"
   },
   "exports": "./dist/full.esm.mjs",
   "types": "index.d.ts",
